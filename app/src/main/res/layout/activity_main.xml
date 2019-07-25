@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <TextView
+            android:id="@+id/hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:textSize="14sp"
+            android:text="请输入金额"/>
+
+    <com.feeling.demo.MoneyEditTextView
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hint"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"/>
+
+    <com.feeling.moneyinputview.MoneyKeyboardView
+            android:id="@+id/keyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:textSize="20sp"
+            app:keyBackground="@drawable/keyboard_bg"
+            app:confirmDrawable="@drawable/ic_confirm"
+            app:deleteDrawable="@drawable/ic_delete"/>
+
+</RelativeLayout>
