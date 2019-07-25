@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MoneyKeyboardView">
+        <attr name="textSize" format="dimension"/>
+        <attr name="textColor" format="color"/>
+        <attr name="keyBackground" format="color"/>
+        <attr name="dividerColor" format="color"/>
+        <attr name="deleteDrawable" format="reference"/>
+        <attr name="confirmDrawable" format="reference"/>
+    </declare-styleable>
+</resources>
