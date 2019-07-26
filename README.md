@@ -20,3 +20,30 @@ dependencies {
 }
 ```
 ### 属性介绍
+
+|属性|格式|例如|
+|-|-|-|
+|textSize|dimension|20sp|
+|textColor|color|#000000|
+|keyBackground|reference|app:keyBackground="@drawable/keyboard_bg"|
+|dividerColor|color|#BFBFBF|
+|deleteDrawable|reference|app:deleteDrawable="@drawable/ic_delete"|
+|confirmDrawable|reference|app:confirmDrawable="@drawable/ic_confirm"|
+
+### 使用
+
+```java
+keyboardView?.setOnclickListener(object : MoneyKeyboardView.OnClickListener {
+    override fun onClickKey(keyValue: Any) {
+        if(keyValue is String){
+            edAmount?.addText(keyValue)
+        }
+    }
+    override fun onConfirm() {
+        Toast.makeText(this@MainActivity,"amount: ${edAmount?.getAmount()}", Toast.LENGTH_SHORT).show()
+    }
+    override fun onDelete() {
+        edAmount?.deleteText()
+    }
+})
+```
